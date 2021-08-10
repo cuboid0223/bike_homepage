@@ -1,0 +1,315 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+* {
+  box-sizing: border-box;
+}
+body {
+  line-height: 1.5;
+  font-family: "Lato", "Merriweather", Helvetica, sans-serif;
+}
+.container {
+  max-width: 1410px;
+  margin: 0 auto;
+}
+.inner-container {
+  max-width: 570px;
+  margin: 0 auto;
+}
+
+// 通用類別
+.btn-fill-primary {
+  display: inline-block;
+  padding: 16px 51px;
+  font-weight: bold;
+  font-size: $font-m;
+  @include btn-fill($primary-color, #000, $secondary-color);
+}
+.title {
+  font-weight: 900;
+  font-family: "Merriweather", serif;
+  font-style: italic;
+}
+.color-gray {
+  color: $color-gray;
+}
+.fs-sm {
+  font-size: $font-s;
+}
+
+.fs-m {
+  font-size: $font-m;
+}
+
+.fs-l {
+  font-size: $font-l;
+}
+
+.color-gray {
+  color: #00000099;
+}
+
+// header, footer -> navbar
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 48px;
+  border-bottom: 1px solid #000;
+  animation: slideInDown;
+  animation-duration: 0.3s;
+  .logo {
+    @include hide-text;
+    width: 112px;
+    height: 48px;
+    background-image: url("../images/week7/logo-fixie.svg");
+  }
+
+  ul {
+    display: flex;
+    li {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    li + li {
+      margin-left: 48px;
+    }
+  }
+}
+
+// productBox
+.productBox {
+  display: flex;
+  &__infoBox {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    & > div {
+      margin-right: 96px;
+    }
+    .title {
+      font-size: 96px;
+      margin-bottom: 48px;
+      animation: slideInLeft;
+      animation-duration: 0.8s;
+      @include laptop {
+        font-size: 64px;
+      }
+    }
+    .content {
+      font-size: $font-m;
+      animation: slideInLeft;
+      animation-duration: 0.9s;
+      margin-bottom: 48px;
+    }
+    .btn {
+      animation: slideInLeft;
+      animation-duration: 1s;
+    }
+  }
+
+  &__imageBox {
+    width: 50%;
+    background-color: #000000;
+    .image {
+      height: 864px;
+      object-fit: cover;
+      animation: slideInRight;
+      animation-duration: 0.8s;
+      animation-delay: 0.2s;
+    }
+    nav {
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      border: 1px solid $secondary-color;
+    }
+    .arrow {
+      padding: 36px;
+      line-height: 1;
+      border-right: 1px solid $secondary-color;
+      .material-icons-outlined {
+        font-size: 48px;
+      }
+    }
+    .productName {
+      font-size: 48px;
+      line-height: 1;
+      font-weight: 900;
+      font-family: "Merriweather", serif;
+      padding: 30px 48px;
+      font-style: italic;
+    }
+  }
+}
+
+// introBox
+.introBox {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  // background-color: #000;
+
+  &__infoBox {
+    width: 50%;
+    background-color: $primary-color;
+  }
+
+  .image {
+    width: 50%;
+    height: 960px;
+    @include background-settings;
+  }
+  .image-bikeWithMan {
+    background-image: url("../images/week7/img2.jpg");
+    background-position: 10% 50%;
+  }
+  .image-gear {
+    background-image: url("../images/week7/img3.jpg");
+  }
+  .content {
+    position: absolute;
+  }
+  .title {
+    font-size: 72px;
+    text-align: right;
+  }
+  .btn-readMore {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    position: absolute;
+    right: 24px;
+    @include absolute-center;
+    & > p {
+      font-size: $font-m;
+      font-weight: bold;
+      padding: 16px;
+    }
+    & > .material-icons-outlined {
+      padding: 23px;
+    }
+  }
+  &:nth-child(even) {
+    .content {
+      right: 255px;
+      top: 96px;
+    }
+    .title {
+      text-align: right;
+      position: absolute;
+      bottom: 192px;
+      right: 96px;
+    }
+    .btn-readMore {
+      & > p {
+        background-color: white;
+      }
+      & > .material-icons-outlined {
+        background-color: black;
+        color: white;
+      }
+    }
+  }
+  &:nth-child(odd) {
+    flex-direction: row-reverse;
+    .content {
+      text-align: right;
+      left: 255px;
+      bottom: 96px;
+    }
+    .title {
+      position: absolute;
+      top: 192px;
+      left: 96px;
+    }
+    .btn-readMore {
+      & > p {
+        background-color: black;
+        color: white;
+      }
+      & > .material-icons-outlined {
+        background-color: #fff;
+      }
+    }
+  }
+}
+
+// seriesInfoBox
+.seriesInfoBox {
+  text-align: center;
+  padding: 96px 0;
+  .title {
+    font-size: 48px;
+  }
+}
+
+//characterIntroBox
+.characterIntroBox {
+  overflow: hidden;
+  height: 640px;
+  background-image: url("../images/week7/img4.jpg");
+  @include background-settings;
+  background-position: 50% 50%;
+  position: relative;
+
+  aside {
+    padding: 16px;
+    position: absolute;
+    bottom: 77px;
+    background-color: $primary-color;
+
+    .title {
+      font-size: $font-m;
+      margin-bottom: 16px;
+    }
+  }
+}
+
+// articleBox
+.articleBox {
+  padding: 96px 0;
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .card {
+    max-width: 450px;
+    & img {
+      width: 100%;
+      height: 600px;
+      object-fit: cover;
+      margin-bottom: 24px;
+    }
+    .title {
+      font-size: $font-m;
+      margin-bottom: 16px;
+    }
+    .date {
+      margin-bottom: 16px;
+    }
+  }
+}
+//footer
+.footer {
+  background-color: $primary-color;
+  border-bottom: unset;
+  flex-direction: row-reverse;
+ 
+  h2 {
+    flex: 0.4;
+    .logo {
+      margin-left: auto;
+    }
+  }
+  .copyright {
+    font-size: $font-s;
+  }
+
+  ul {
+    flex: 0.4;
+    li {
+      font-size: 16px;
+    }
+  }
+}

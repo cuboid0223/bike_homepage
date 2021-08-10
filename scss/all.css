@@ -1,0 +1,563 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  line-height: 1.5;
+  font-family: "Lato", "Merriweather", Helvetica, sans-serif;
+}
+
+.container {
+  max-width: 1410px;
+  margin: 0 auto;
+}
+
+.inner-container {
+  max-width: 570px;
+  margin: 0 auto;
+}
+
+.btn-fill-primary {
+  display: inline-block;
+  padding: 16px 51px;
+  font-weight: bold;
+  font-size: 24px !important;
+  border: 1px solid #121212;
+  color: #000 !important;
+  background-color: #f1f5f6 !important;
+}
+
+.title {
+  font-weight: 900;
+  font-family: "Merriweather", serif;
+  font-style: italic;
+}
+
+.color-gray {
+  color: #00000099;
+}
+
+.fs-sm {
+  font-size: 14px !important;
+}
+
+.fs-m {
+  font-size: 24px !important;
+}
+
+.fs-l {
+  font-size: 48px !important;
+}
+
+.color-gray {
+  color: #00000099;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 24px 48px;
+  border-bottom: 1px solid #000;
+  -webkit-animation: slideInDown;
+          animation: slideInDown;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+}
+
+.navbar .logo {
+  overflow: hidden;
+  text-indent: 101%;
+  white-space: nowrap;
+  width: 112px;
+  height: 48px;
+  background-image: url("../images/week7/logo-fixie.svg");
+}
+
+.navbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navbar ul li {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar ul li + li {
+  margin-left: 48px;
+}
+
+.productBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.productBox__infoBox {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.productBox__infoBox > div {
+  margin-right: 96px;
+}
+
+.productBox__infoBox .title {
+  font-size: 96px;
+  margin-bottom: 48px;
+  -webkit-animation: slideInLeft;
+          animation: slideInLeft;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+}
+
+@media (max-width: 1600px) {
+  .productBox__infoBox .title {
+    font-size: 64px;
+  }
+}
+
+.productBox__infoBox .content {
+  font-size: 24px !important;
+  -webkit-animation: slideInLeft;
+          animation: slideInLeft;
+  -webkit-animation-duration: 0.9s;
+          animation-duration: 0.9s;
+  margin-bottom: 48px;
+}
+
+.productBox__infoBox .btn {
+  -webkit-animation: slideInLeft;
+          animation: slideInLeft;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.productBox__imageBox {
+  width: 50%;
+  background-color: #000000;
+}
+
+.productBox__imageBox .image {
+  height: 864px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-animation: slideInRight;
+          animation: slideInRight;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.productBox__imageBox nav {
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #121212;
+}
+
+.productBox__imageBox .arrow {
+  padding: 36px;
+  line-height: 1;
+  border-right: 1px solid #121212;
+}
+
+.productBox__imageBox .arrow .material-icons-outlined {
+  font-size: 48px;
+}
+
+.productBox__imageBox .productName {
+  font-size: 48px;
+  line-height: 1;
+  font-weight: 900;
+  font-family: "Merriweather", serif;
+  padding: 30px 48px;
+  font-style: italic;
+}
+
+.introBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.introBox__infoBox {
+  width: 50%;
+  background-color: #f1f5f6;
+}
+
+.introBox .image {
+  width: 50%;
+  height: 960px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.introBox .image-bikeWithMan {
+  background-image: url("../images/week7/img2.jpg");
+  background-position: 10% 50%;
+}
+
+.introBox .image-gear {
+  background-image: url("../images/week7/img3.jpg");
+}
+
+.introBox .content {
+  position: absolute;
+}
+
+.introBox .title {
+  font-size: 72px;
+  text-align: right;
+}
+
+.introBox .btn-readMore {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: absolute;
+  right: 24px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-68%, -50%);
+          transform: translate(-68%, -50%);
+}
+
+.introBox .btn-readMore > p {
+  font-size: 24px !important;
+  font-weight: bold;
+  padding: 16px;
+}
+
+.introBox .btn-readMore > .material-icons-outlined {
+  padding: 23px;
+}
+
+.introBox:nth-child(even) .content {
+  right: 255px;
+  top: 96px;
+}
+
+.introBox:nth-child(even) .title {
+  text-align: right;
+  position: absolute;
+  bottom: 192px;
+  right: 96px;
+}
+
+.introBox:nth-child(even) .btn-readMore > p {
+  background-color: white;
+}
+
+.introBox:nth-child(even) .btn-readMore > .material-icons-outlined {
+  background-color: black;
+  color: white;
+}
+
+.introBox:nth-child(odd) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.introBox:nth-child(odd) .content {
+  text-align: right;
+  left: 255px;
+  bottom: 96px;
+}
+
+.introBox:nth-child(odd) .title {
+  position: absolute;
+  top: 192px;
+  left: 96px;
+}
+
+.introBox:nth-child(odd) .btn-readMore > p {
+  background-color: black;
+  color: white;
+}
+
+.introBox:nth-child(odd) .btn-readMore > .material-icons-outlined {
+  background-color: #fff;
+}
+
+.seriesInfoBox {
+  text-align: center;
+  padding: 96px 0;
+}
+
+.seriesInfoBox .title {
+  font-size: 48px;
+}
+
+.characterIntroBox {
+  overflow: hidden;
+  height: 640px;
+  background-image: url("../images/week7/img4.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-position: 50% 50%;
+  position: relative;
+}
+
+.characterIntroBox aside {
+  padding: 16px;
+  position: absolute;
+  bottom: 77px;
+  background-color: #f1f5f6;
+}
+
+.characterIntroBox aside .title {
+  font-size: 24px !important;
+  margin-bottom: 16px;
+}
+
+.articleBox {
+  padding: 96px 0;
+}
+
+.articleBox .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.articleBox .card {
+  max-width: 450px;
+}
+
+.articleBox .card img {
+  width: 100%;
+  height: 600px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 24px;
+}
+
+.articleBox .card .title {
+  font-size: 24px !important;
+  margin-bottom: 16px;
+}
+
+.articleBox .card .date {
+  margin-bottom: 16px;
+}
+
+.footer {
+  background-color: #f1f5f6;
+  border-bottom: unset;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.footer h2 {
+  -webkit-box-flex: 0.4;
+      -ms-flex: 0.4;
+          flex: 0.4;
+}
+
+.footer h2 .logo {
+  margin-left: auto;
+}
+
+.footer .copyright {
+  font-size: 14px !important;
+}
+
+.footer ul {
+  -webkit-box-flex: 0.4;
+      -ms-flex: 0.4;
+          flex: 0.4;
+}
+
+.footer ul li {
+  font-size: 16px;
+}
+/*# sourceMappingURL=all.css.map */

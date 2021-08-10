@@ -1,0 +1,32 @@
+@mixin desktop {
+  // @media (min-width: 1025px) {
+  //   @content;
+  // }
+  @media (min-width: 1601px) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (max-width: 1600px) {
+    @content;
+  }
+}
+
+@mixin ipadPro {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin ipad {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin iphone {
+  @media (max-width: 414px) {
+    @content;
+  }
+} ;
